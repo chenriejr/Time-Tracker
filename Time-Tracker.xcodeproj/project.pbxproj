@@ -21,6 +21,9 @@
 		7116F79B19421700006C8F06 /* Time_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7116F79A19421700006C8F06 /* Time_TrackerTests.m */; };
 		F75544611A96883400F1C6D1 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F75544601A96883400F1C6D1 /* ListViewController.m */; };
 		F75544671A968A7000F1C6D1 /* ListTableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = F75544661A968A7000F1C6D1 /* ListTableViewDatasource.m */; };
+		F755446A1A96930400F1C6D1 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = F75544691A96930400F1C6D1 /* Project.m */; };
+		F755446D1A9693DB00F1C6D1 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = F755446C1A9693DB00F1C6D1 /* Entry.m */; };
+		F75544701A96940D00F1C6D1 /* ProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = F755446F1A96940D00F1C6D1 /* ProjectController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		F75544601A96883400F1C6D1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../ListViewController.m; sourceTree = "<group>"; };
 		F75544651A968A7000F1C6D1 /* ListTableViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewDatasource.h; path = ../ListTableViewDatasource.h; sourceTree = "<group>"; };
 		F75544661A968A7000F1C6D1 /* ListTableViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewDatasource.m; path = ../ListTableViewDatasource.m; sourceTree = "<group>"; };
+		F75544681A96930400F1C6D1 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		F75544691A96930400F1C6D1 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		F755446B1A9693DB00F1C6D1 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		F755446C1A9693DB00F1C6D1 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		F755446E1A96940D00F1C6D1 /* ProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectController.h; sourceTree = "<group>"; };
+		F755446F1A96940D00F1C6D1 /* ProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +122,8 @@
 		7116F77B19421700006C8F06 /* Time-Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				7116F78419421700006C8F06 /* TTAppDelegate.h */,
-				7116F78519421700006C8F06 /* TTAppDelegate.m */,
-				F755445F1A96883400F1C6D1 /* ListViewController.h */,
-				F75544601A96883400F1C6D1 /* ListViewController.m */,
-				F75544651A968A7000F1C6D1 /* ListTableViewDatasource.h */,
-				F75544661A968A7000F1C6D1 /* ListTableViewDatasource.m */,
+				F75544711A96AAF000F1C6D1 /* Modal */,
+				F75544721A96AAFD00F1C6D1 /* List View */,
 				7116F78719421700006C8F06 /* Images.xcassets */,
 				7116F77C19421700006C8F06 /* Supporting Files */,
 			);
@@ -152,6 +157,32 @@
 				7116F79719421700006C8F06 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F75544711A96AAF000F1C6D1 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				7116F78419421700006C8F06 /* TTAppDelegate.h */,
+				7116F78519421700006C8F06 /* TTAppDelegate.m */,
+				F75544681A96930400F1C6D1 /* Project.h */,
+				F75544691A96930400F1C6D1 /* Project.m */,
+				F755446B1A9693DB00F1C6D1 /* Entry.h */,
+				F755446C1A9693DB00F1C6D1 /* Entry.m */,
+				F755446E1A96940D00F1C6D1 /* ProjectController.h */,
+				F755446F1A96940D00F1C6D1 /* ProjectController.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		F75544721A96AAFD00F1C6D1 /* List View */ = {
+			isa = PBXGroup;
+			children = (
+				F755445F1A96883400F1C6D1 /* ListViewController.h */,
+				F75544601A96883400F1C6D1 /* ListViewController.m */,
+				F75544651A968A7000F1C6D1 /* ListTableViewDatasource.h */,
+				F75544661A968A7000F1C6D1 /* ListTableViewDatasource.m */,
+			);
+			name = "List View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F755446D1A9693DB00F1C6D1 /* Entry.m in Sources */,
 				7116F78619421700006C8F06 /* TTAppDelegate.m in Sources */,
 				7116F78219421700006C8F06 /* main.m in Sources */,
+				F75544701A96940D00F1C6D1 /* ProjectController.m in Sources */,
 				F75544671A968A7000F1C6D1 /* ListTableViewDatasource.m in Sources */,
+				F755446A1A96930400F1C6D1 /* Project.m in Sources */,
 				F75544611A96883400F1C6D1 /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
